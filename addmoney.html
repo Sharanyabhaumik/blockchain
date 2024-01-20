@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crowdfunding Example</title>
+    <style>
+        body{
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkALrwHEegFaSlPnwMY5mTW68fXXQf4Guv6sLYKGPB5QncV9wBr0EA-uiHtkjgWClCLhk&usqp=CAU");
+            background-position: center;
+            background-repeat: no-repeat;
+            color: rgb(80, 33, 12);
+            background-position-y: 300px;
+            
+        }
+        @keyframes bounce {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+      transform: translateY(0);
+    }
+  
+    40% {
+      transform: translateY(-30px);
+    }
+  
+    60% {
+      transform: translateY(-15px);
+    }
+  }
+  
+  .bounce {
+    animation-name: bounce;
+  }
+        #total-amount {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: bisque;
+            background-color: brown;
+            text-align: center;
+            animation-name: bounce;
+            animation-duration: 3s;
+        
+        }
+
+        #add-money-input {
+            padding: 8px;
+            font-size: 16px;
+            text-align: center;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: blue;
+            background-color: bisque;
+        }
+
+        #add-money-btn {
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            font-style: italic;
+            color: rebeccapurple;
+            background-color: aquamarine;
+        }
+        .progress {
+    position: relative;
+    width: 210px;
+    height: 30px;
+    background: #9cbab4;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .progress__fill {
+    width: 30%;
+    height: 100%;
+    background: #009579;
+    transition: all 0.2s;
+  }
+  
+  .progress__text {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+    font: bold 14px "Quicksand", sans-serif;
+    color: #ffffff;
+  }
+
+    </style>
+</head>
+<body>
+
+<div>
+    <p id="total-amount">Total Amount: $1000</p>
+    <label for="add-money-input"><h1>Add Amount: $</h1></label>
+    <input type="number" id="add-money-input" min="0" step="1">
+    <button id="add-money-btn">Add</button>
+
+</div>
+<div class="progress">
+    <div class="progress__fill"></div>
+    <span id="progress__text">Percentage is 1%</span>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+           
+           let totalAmount = 1000;
+
+
+function updateTotalAmount() {
+    document.getElementById('total-amount').textContent =` totalAmount: $${totalAmount}...target: $ 8000`;
+}
+
+
+document.getElementById('add-money-btn').addEventListener('click', function () {
+    
+    const addAmount = parseFloat(document.getElementById('add-money-input').value) || 0;
+
+    // Add the desired amount to the total amount
+    totalAmount += addAmount;
+
+    // Update the displayed total amount
+    updateTotalAmount();
+});
+
+// Initial update
+updateTotalAmount();
+});
+</script>

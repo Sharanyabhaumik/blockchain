@@ -1,0 +1,226 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    
+    color: #200202;
+}
+@keyframes slideInLeft {
+    from {
+      transform: translateX(-300px);
+    }
+  
+    to {
+      transform: translateX(0);
+    }
+  }
+  .slideInLeft {
+    animation-name: slideInLeft;
+    animation-timing-function: ease-in;
+  }
+  @keyframes slideInRight {
+    from {
+      transform: translateX(300px);
+    }
+  
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  .slideInRight {
+    animation-name: slideInRight;
+    animation-timing-function: ease-in;
+  }
+
+header {
+    background-image:url("https://wallpapers.com/images/hd/unique-background-uo9x7en7qjvwcmsa.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    padding: 50px 0;
+    animation-name: slideInLeft;
+    animation-duration: 1s;
+}
+
+.about-us{
+    color: #09334f;
+    background-color: rgb(3, 50, 35);
+    box-shadow: 4px 3px 20px black;
+    transition: 0.5s ease;
+}
+.about-us:hover{
+    transform: scale(1.1);
+}
+.our-story{
+    color: #09334f;
+    background-color: rgb(49, 46, 5);
+    box-shadow: 4px 3px 20px black;
+    transition: 0.5s ease;
+}
+.our-story:hover{
+    transform: scale(1.1);
+}
+.why-support{
+    color: #040531;
+    background-color: rgb(43, 10, 48);
+    box-shadow: 4px 3px 20px black;
+    transition: 0.5s ease;
+}
+.why-support:hover{
+    transform: scale(1.1);
+}
+
+
+
+
+h2 {
+    color: #b4c5d0;
+    font-style: italic;
+    animation-name: slideInRight;
+    animation-duration: 2s;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    margin: 20px 0;
+}
+
+label {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+input {
+    padding: 10px;
+    margin-bottom: 20px;
+}
+body{
+    background-image: url("https://img.freepik.com/free-vector/beautiful-decorative-soft-colorful-watercolor-texture-background_1055-14290.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+button {
+    padding: 10px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background-color: #29b965;
+    transform: scale(0.8);
+}
+
+#progressBarContainer {
+    background-color: #bdc3c7;
+    height: 30px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+#progressBar {
+    height: 100%;
+    background-color: #3498db;
+    width: 0;
+}
+
+#progressText {
+    font-weight: bold;
+}
+.slider-container {
+    position: relative;
+    max-width: 800px;
+    margin: 50px auto;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    
+}
+
+img {
+    width: 100%;
+    height: auto;
+    padding-right: 400px;
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+@keyframes rotate {
+    from {
+      transform: rotate(0);
+    }
+  
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .rotate {
+    animation-name: rotate;
+    animation-timing-function: linear;
+  
+    transform-origin: top left;
+  }
+h1{
+    text-align: center;
+    font-style: algerian;
+    background-color: rgb(129, 184, 146);
+    box-shadow: 20px 4px 5px black;
+    transition: 0.25s ease;
+    animation-name: rotate;
+    animation-duration: 2s;
+}
+h1:hover{
+    transform: scale(1.1);
+}
+@keyframes bounce {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+      transform: translateY(0);
+    }
+  
+    40% {
+      transform: translateY(-30px);
+    }
+  
+    60% {
+      transform: translateY(-15px);
+    }
+  }
+  
+  .bounce {
+    animation-name: bounce;
+  }
+p{
+    color: white;
+    font-size: large;
+    font-family: 'algerian';
+    animation-name: bounce;
+    animation-duration: 3s;
+}
+.slider img{
+  height: 300px;
+  width: 200px%;
+}

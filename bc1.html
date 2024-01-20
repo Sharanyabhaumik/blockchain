@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crowdfunding Website</title>
+    <link rel="stylesheet" href="bc 1.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+<body>
+    <header>
+        <h1>Crowdfunding Platform</h1>
+    </header>
+    <main>
+        <style type="text/css">
+            footer{
+                color: aliceblue;
+                background-color:rgb(92, 91, 91);
+                font-size: large;
+            }
+            
+		*{
+			text-decoration: none;
+		}
+		.navbar{
+			background:  rgb(167, 49, 159); font-family: calibri; padding-right: 15px;padding-left: 15px;box-shadow: 5px 5px 25px black;
+            transition: 0.5s ease; opacity: 90%;}
+
+
+            .logo{ font-size: 50px; color: antiquewhite; transition: 0.25s ease;
+
+            }
+            .logo :hover{ transform: scale(1.1);}
+		
+        .navbar:hover{
+            background: rgb(146, 47, 108);
+            transform: scale(1.5);
+        }
+		.navdiv{
+			display: flex; align-items: center; justify-content: space-between;
+		}
+		.logo a{
+			font-size: 60px; font-weight: 600; color: white;
+		}
+		li{
+			list-style: none; display: inline-block;
+		}
+		li a{
+			color: white; font-size: 20px; font-weight: bold; margin-right: 25px;
+		}
+		
+		button a{
+			color: white; font-weight: bold; font-size: 15px;
+		}
+	
+            *{
+             margin: 0px;
+             padding: 0px;
+             text-decoration:none
+            }
+            body{
+             font-family: arial;
+            }
+           
+            
+            .card{
+                 width: 50%;
+                 display: inline-block;
+                 box-shadow: 3px 3px 20px black;
+                 border-radius: 5px; 
+                 margin: 3%;
+                 transition: 0.25s ease;
+                }
+
+            .card:hover{
+                transform: scale(1.1);
+                box-shadow: 15px 15px 30px black;
+            }   
+            
+            .image img{
+              width: 100%;
+              border-top-right-radius: 5px;
+              border-top-left-radius: 5px;
+              
+            
+             
+             }
+            
+            .title{
+             
+              text-align: center;
+              padding: 10px;
+              font-size: 30px;
+              
+             }
+            
+            h1{
+              font-size: 20px;
+             }
+            
+            .des{
+              padding: 3px;
+              text-align: center;
+             
+              padding-top: 10px;
+              border-bottom-right-radius: 5px;
+              border-bottom-left-radius: 5px;
+            }
+            button{
+              margin-top: 40px;
+              margin-bottom: 10px;
+              background-color: rgb(171, 221, 228);
+              border: 1px solid black;
+              border-radius: 5px;
+              padding:10px;
+              transition: 0.5s ease;
+            }
+            button:hover{
+              background-color: black;
+              color: white;
+              transition: .5s;
+              cursor: pointer;
+              transform: scale(1.2);
+            }
+            .button1 {
+                max-height: 50px;
+                max-width: 50px;
+                align-items: center;
+                border-radius: 50px;
+                background-color: antiquewhite;
+                color: black;
+    
+}
+            </style>
+            <body>
+                <nav class="navbar">
+                    <div class="navdiv">
+                        <div class="logo"><a href="#">BackingBreeze</a> </div>
+                        
+               
+                        <ul>
+                            
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <button><a href="authentication2.html">AUTHENTICATION</a></button>
+				            
+			
+                        </ul>
+                    </div>
+                </nav>
+                <div class="search-container">
+                    <input type="text" id="campaignSearch" placeholder="Search...">
+                
+                    <button onclick="searchCampaigns()" class="button1"><i class="fa fa-search"></i><span class="material-symbols-outlined">
+                        search
+                        </span></button>
+                </div>
+
+        <script>
+            // Function to search campaigns
+            function searchCampaigns() {
+                // Get input value
+                const searchInput = document.getElementById('campaignSearch').value.toLowerCase();
+    
+                // Get all campaign cards
+                const cards = document.querySelectorAll('.card');
+    
+                // Loop through each card and hide/show based on search input
+                cards.forEach(card => {
+                    const title = card.querySelector('.title h1').innerText.toLowerCase();
+                    const description = card.querySelector('.des p').innerText.toLowerCase();
+    
+                    if (title.includes(searchInput) || description.includes(searchInput)) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            }
+        </script>
+
+            
+            
+            <div class="main">
+            
+            
+            
+            <div class="card">
+            
+            <div class="image">
+               <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Children_at_the_Belovodski_Preschool_Orphanage_in_Karabalta.jpg/220px-Children_at_the_Belovodski_Preschool_Orphanage_in_Karabalta.jpg">
+            </div>
+            <div class="title">
+             <h1>
+                Orphanage Home</h1>
+            </div>
+            <div class="des">
+             <p>Bringing Hope Home: Empower Orphans for a Brighter Tomorrow</p>
+            <button><a href="index1.html">Read more...</a></button>
+            <button onclick="warning()"><a href="authentication2.html">Donate</a></button>
+            </div>
+            </div>
+            
+            
+            
+            <div class="card">
+            
+            <div class="image">
+               <img src="https://i.ytimg.com/vi/5XOQgWrJLlI/maxresdefault.jpg">
+            </div>
+            <div class="title">
+             <h1>
+            Oldage Home</h1>
+            </div>
+            <div class="des">
+             <p>Extend a Helping Hand: Empower Our Elders, Fund Their Golden Years</p>
+             <button><a href="index2.html">Read more...</a></button>
+             <button onclick="warning()"><a href="authentication2.html">Donate</a></button>
+            </div>
+            </div>
+            
+            
+            
+            <div class="card">
+            
+            <div class="image">
+               <img src="https://i-cdn.embed.ly/1/display/crop?height=300&key=fd92ebbc52fc43fb98f69e50e7893c13&url=https%3A%2F%2Fdayton247now.com%2Fresources%2Fmedia%2Fb688e727-8f6b-4b3e-82ac-679bb9a7b8c8-large16x9_pinktoberfs107.png%3F1664977290395&width=636">
+            </div>
+            <div class="title">
+             <h1>
+            Cancer Funding</h1>
+            </div>
+            <div class="des">
+             <p>Unite Against Cancer: Your Support Lights the Path to Hope and Healing</p>
+             <button><a href="index3.html">Read more...</a></button>
+             <button onclick="warning()">Donate</button>
+            </div>
+            </div>
+           
+            
+            
+            <div class="card">
+            
+            <div class="image">
+               <img src="https://img.etimg.com/thumb/width-1200,height-1200,imgsize-456055,resizemode-75,msid-96639661/wealth/save/tap-crowdfunding-to-raise-funds-for-a-cause-how-to-start-a-fundraiser.jpg">
+            </div>
+            <div class="title">
+             <h1>
+            Bone Marrow Transplant</h1>
+            </div>
+            <div class="des">
+             <p>Gift of Life: Join Us in Funding Hope for Bone Marrow Transplants. Every Contribution Counts!</p>
+             <button><a href="index4.html">Read more...</a></button>
+             <button onclick="warning()">Donate</button>
+            </div>
+            </div>
+          
+            
+            
+            <div class="card">
+            
+            <div class="image">
+               <img src="https://www.nutritionnews.abbott/content/dam/an/newsroom/us/en/images/articles/pregnancy-childhood/infant-toddler/Mom%20holding%20tiny%20baby%20feet_930x405.jpg">
+            </div>
+            <div class="title">
+             <h1>
+            Preterm Baby Care</h1>
+            </div>
+            <div class="des">
+             <p>Nurturing the Tiniest Warriors: Support Our Preterm Babies on their Journey to Health and Happiness</p>
+             <button><a href="index5.html">Read more...</a></button>
+             <button onclick="warning()">Donate</button>
+            </div>
+            </div>
+            
+            
+            <div class="card">
+            
+            <div class="image">
+               <img src="https://i0.wp.com/ketto.blog/wp-content/uploads/2022/12/Heres-how-to-finance-your-long-awaited-liver-transplant-surgery.png?fit=1920%2C1080&ssl=1">
+            </div>
+            <div class="title">
+             <h1>
+            Liver Transplant</h1>
+            </div>
+            <div class="des">
+             <p>Gift of Life: Unite for Liver Transplant Journey. Your Support Can Turn Hope into Healing</p>
+             <button><a href="index6.html">Read more...</a></button>
+             <button onclick="warning()">Donate</button>
+            </div>
+            </div>
+            
+            
+            <div class="card">
+            
+            <div class="image">
+               <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Gfp-missouri-st-louis-clubhouse-pond-and-scenery.jpg/1199px-Gfp-missouri-st-louis-clubhouse-pond-and-scenery.jpg">
+            </div>
+            <div class="title">
+             <h1>
+            Brain Surgery</h1>
+            </div>
+            <div class="des">
+             <p>Empower Healing: Join Hands in Crowdfunding Brain Surgery. Your Support is the Key to a Brighter Tomorrow</p>
+             <button><a href="index7.html">Read more...</a></button>
+             <button onclick="warning()">Donate</button>
+            
+            </div>
+            </div>
+           
+            
+            
+            <div class="card">
+            
+            <div class="image">
+               <img src="data:image/jpeg;base64,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">
+            </div>
+            <div class="title">
+             <h1>
+            All For NGOs</h1>
+            </div>
+            <div class="des">
+             <p>Championing Change: Support Our NGO's Mission to Make a Difference. Together, We Can Transform Lives and Build a Better Tomorrow</p>
+             <button><a href="index8.html">Read more...</a></button>
+             <button onclick="warning()">Donate</button>
+            </div>
+            </div>
+            
+            
+            
+            <div class="card">
+            
+            <div class="image">
+               <img src="https://organiser.org/wp-content/uploads/2022/12/collage-1.jpg">
+            </div>
+            <div class="title">
+             <h1>
+            A Step Towards Tribals</h1>
+            </div>
+            <div class="des">
+             <p>Elevate Lives, Empower Tribals: Let's Create Sustainable Change Together. Support Our Crowdfunding Campaign for Tribal Communities</p>
+             <button><a href="index9.html">Read more...</a></button>
+             <button onclick="warning()">Donate</button>
+            </div>
+            </div>
+
+        
+            
+
+            <div class="card">
+            
+                <div class="image">
+                   <img src="https://partners.skoolz.in/blogs/36ba9bff-00dd-4245-95dc-065d77cae1b6_BlogDescription.png">
+                </div>
+                <div class="title">
+                 <h1>
+                Education for Rurals</h1>
+                </div>
+                <div class="des">
+                 <p>Seeds of Change: Empower Rural Communities Through Crowdfunding. Join Us in Cultivating Sustainable Development and Transforming Lives</p>
+                 <button><a href="index10.html">Read more...</a></button>
+                 <button onclick="warning()">Donate</button>
+                </div>
+                </div>
+                </div>
+    
+    
+    
+    
+    
+
+        
+    
+        
+
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Crowdfunding Platform</p>
+    </footer>
+
+    <script src="bc1.js"></script>
+</body>
+</html>
